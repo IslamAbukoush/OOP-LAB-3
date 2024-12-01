@@ -2,12 +2,11 @@ package org.carservice.models;
 
 public class Car {
     private int id;
-    private String type; // ELECTRIC or GAS
-    private String passengers; // PEOPLE or ROBOTS
+    private String type;
+    private String passengers;
     private boolean isDining;
-    private int consumption; // Consumption value
+    private int consumption;
 
-    // Constructor
     public Car(int id, String type, String passengers, boolean isDining, int consumption) {
         this.id = id;
         this.type = type;

@@ -1,17 +1,19 @@
 package org;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+import org.carservice.implementations.GasStation;
+import org.carservice.implementations.PeopleDinner;
+import org.carservice.models.Car;
+import org.carservice.queue.ArrayQueue;
+import org.carservice.queue.Queue;
+import org.carservice.station.CarStation;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Queue<Car> queue = new ArrayQueue<>();
+        CarStation carStation = new CarStation(new PeopleDinner(), new GasStation(), queue);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        // Start the scheduled tasks
+        carStation.startScheduledTasks();
     }
 }

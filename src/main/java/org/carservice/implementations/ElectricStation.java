@@ -6,9 +6,9 @@ public class ElectricStation implements Refuelable {
     private static int electricCarsServed = 0;
 
     @Override
-    public void refuel(String carId) {
+    public void refuel(int carId) {
         electricCarsServed++;
-        System.out.println("Refueling electric car " + carId + ".");
+        System.out.println("Refueling electric car Car" + carId + ".");
     }
 
     public static int getElectricCarsServed() {
