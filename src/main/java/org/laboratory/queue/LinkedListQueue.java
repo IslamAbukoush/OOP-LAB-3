@@ -1,4 +1,4 @@
-package org.carservice.queue;
+package org.laboratory.queue;
 
 import java.util.LinkedList;
 

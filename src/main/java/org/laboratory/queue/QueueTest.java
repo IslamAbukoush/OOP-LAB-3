@@ -1,4 +1,4 @@
-package org.carservice.queue;
+package org.laboratory.queue;
 
 import org.junit.jupiter.api.Test;
 
