@@ -1,6 +1,6 @@
-package org.laboratory.carservice.implementations;
+package org.carservice.implementations;
 
-import org.laboratory.carservice.interfaces.Refuelable;
+import org.carservice.services.Refuelable;
 
 public class GasStation implements Refuelable {
     private static int gasCarsServed = 0;

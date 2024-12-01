@@ -1,4 +1,4 @@
-package org.laboratory.models;
+package org.carservice.models;
 
 public class Car {
     private int id;

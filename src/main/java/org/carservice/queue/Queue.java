@@ -1,4 +1,4 @@
-package org.laboratory.queue;
+package org.carservice.queue;
 
 public interface Queue<T> {
     void enqueue(T item);

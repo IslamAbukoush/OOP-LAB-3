@@ -1,10 +1,10 @@
-package org.laboratory.carservice;
+package org.carservice;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.laboratory.carservice.implementations.ElectricStation;
-import org.laboratory.carservice.implementations.GasStation;
-import org.laboratory.carservice.implementations.PeopleDinner;
-import org.laboratory.carservice.implementations.RobotDinner;
+import org.carservice.implementations.ElectricStation;
+import org.carservice.implementations.GasStation;
+import org.carservice.implementations.PeopleDinner;
+import org.carservice.implementations.RobotDinner;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

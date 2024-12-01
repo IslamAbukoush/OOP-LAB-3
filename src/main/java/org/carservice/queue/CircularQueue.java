@@ -1,4 +1,4 @@
-package org.laboratory.queue;
+package org.carservice.queue;
 
 public class CircularQueue<T> implements Queue<T> {
     private final Object[] items;

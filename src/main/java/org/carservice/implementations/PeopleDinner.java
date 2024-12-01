@@ -1,6 +1,6 @@
-package org.laboratory.carservice.implementations;
+package org.carservice.implementations;
 
-import org.laboratory.carservice.interfaces.Dineable;
+import org.carservice.services.Dineable;
 
 public class PeopleDinner implements Dineable {
     private static int peopleServed = 0;
