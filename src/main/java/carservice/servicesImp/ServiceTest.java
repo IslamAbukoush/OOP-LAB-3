@@ -1,15 +1,11 @@
-package org.carservice;
+package carservice.servicesImp;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.carservice.implementations.ElectricStation;
-import org.carservice.implementations.GasStation;
-import org.carservice.implementations.PeopleDinner;
-import org.carservice.implementations.RobotDinner;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ServiceTests {
+class ServiceTest {
     @BeforeEach
     void resetCounters() {
         PeopleDinner.resetCounter();
@@ -23,9 +19,9 @@ class ServiceTests {
         PeopleDinner peopleDinner = new PeopleDinner();
         RobotDinner robotDinner = new RobotDinner();
 
-        peopleDinner.serveDinner(1);
-        peopleDinner.serveDinner(2);
-        robotDinner.serveDinner(3);
+        peopleDinner.serveDinner("Car1");
+        peopleDinner.serveDinner("Car2");
+        robotDinner.serveDinner("Car3");
 
         assertEquals(2, PeopleDinner.getPeopleServed());
         assertEquals(1, RobotDinner.getRobotsServed());
@@ -36,9 +32,9 @@ class ServiceTests {
         ElectricStation electricStation = new ElectricStation();
         GasStation gasStation = new GasStation();
 
-        electricStation.refuel(1);
-        electricStation.refuel(2);
-        gasStation.refuel(3);
+        electricStation.refuel("Car1");
+        electricStation.refuel("Car2");
+        gasStation.refuel("Car3");
 
         assertEquals(2, ElectricStation.getElectricCarsServed());
         assertEquals(1, GasStation.getGasCarsServed());

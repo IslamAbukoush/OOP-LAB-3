@@ -1,4 +1,6 @@
-package org.carservice.models;
+package carservice.models;
+
+import org.json.JSONObject;
 
 public class Car {
     private int id;
@@ -13,6 +15,15 @@ public class Car {
         this.passengers = passengers;
         this.isDining = isDining;
         this.consumption = consumption;
+    }
+
+    public Car(String JSON) {
+        JSONObject object = new JSONObject(JSON);
+        this.id = object.getInt("id");
+        this.type = object.getString("type");
+        this.passengers = object.getString("passengers");
+        this.isDining = object.getBoolean("isDining");
+        this.consumption = object.getInt("consumption");
     }
 
     // Getters
